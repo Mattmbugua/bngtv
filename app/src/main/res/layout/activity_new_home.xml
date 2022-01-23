@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:background="@color/background_home"
+  >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Home"
+                android:textAlignment="center"
+                tools:ignore="PrivateResource" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_discover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discover New"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                    <ImageView
+                        android:id="@+id/img_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home1"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toRightOf="@+id/txt_discover"/>
+                    <ImageView
+                        android:id="@+id/img_headphones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/headset"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/img_home"/>
+
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_discover2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popular"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/img_home2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="105dp"
+                        android:layout_toRightOf="@+id/txt_discover2"
+                        android:src="@drawable/home1" />
+
+                    <ImageView
+                        android:id="@+id/img_headphones2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/headset"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/img_home2"/>
+
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_discover3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suggested"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/img_home3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="98dp"
+                        android:layout_toRightOf="@+id/txt_discover3"
+                        android:src="@drawable/home1" />
+                    <ImageView
+                        android:id="@+id/img_headphones3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/headset"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/img_home3"/>
+
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+            </LinearLayout>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_home"
+                app:menu="@menu/bottom_menu"
+                app:itemIconTint="@drawable/selector1"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

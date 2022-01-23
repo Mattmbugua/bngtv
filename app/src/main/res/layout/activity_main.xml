@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_home"
+    android:layout_gravity="center"
+    tools:context=".Login"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="5dp"
+    >
+    <ImageView
+        android:id="@+id/IconMenu"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/menu_icon"/>
+    <ImageView
+        android:id="@+id/IconLogo"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:layout_toRightOf="@+id/IconMenu"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/loginlogo456"/>
+
+    <TextView
+        android:id="@+id/Seriestxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/IconLogo"
+        android:paddingTop="10dp"
+        android:paddingLeft="45dp"
+        android:text="Series"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/Musictxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/Seriestxt"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/Mycollectiontxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/Musictxt"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="My Collection"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Relati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/vacationSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="100dp"
+            android:text="VACATION SONGS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Romantictxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vacationSongs"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="100dp"
+            android:text="ROMANTIC"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/addPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Romantictxt"
+            android:text="Add to playlist"
+            android:padding="25dp"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/add"/>
+
+        <Button
+            android:id="@+id/playYoutube"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_below="@+id/Romantictxt"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/addPlaylist"
+            android:background="@drawable/round"
+            android:drawableStart="@drawable/playtubeziko"
+            android:drawableLeft="@drawable/playtubeziko"
+            android:padding="3dp"
+            android:text="play"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/infortxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Romantictxt"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="-3dp"
+            android:layout_toRightOf="@+id/playYoutube"
+            android:drawableTop="@drawable/infor"
+            android:padding="25dp"
+            android:text="Infor"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/card1"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/image_slider1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/popular1" />
+
+            <TextView
+                android:id="@+id/txt_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_slider1"
+                android:text="No Guidance"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_song"
+                android:text="100m views Chris Brown"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/card1"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/image_slider2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/popular1" />
+
+            <TextView
+                android:id="@+id/txt_song2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_slider2"
+                android:text="No Guidance"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_views2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_song2"
+                android:text="100m views Chris Brown"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/card1"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/image_slider3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/popular1" />
+
+            <TextView
+                android:id="@+id/txt_song3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_slider3"
+                android:text="No Guidance"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_views3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_song3"
+                android:text="100m views Chris Brown"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/card1"
+            android:elevation="8dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/popular1" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Guidance"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100views Chris Brown"
+            android:textColor="@color/grey" />
+    </LinearLayout>
+
+
+</LinearLayout>
