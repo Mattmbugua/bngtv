@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "522973328038",
-    "project_id": "bngtv-28c86",
-    "storage_bucket": "bngtv-28c86.appspot.com"
+    "project_number": "11742248817",
+    "project_id": "bngtv-a09e3",
+    "storage_bucket": "bngtv-a09e3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:522973328038:android:e912b26286324c21997a67",
+        "mobilesdk_app_id": "1:11742248817:android:9b7adb83ea3b7856fb80d0",
         "android_client_info": {
           "package_name": "com.example.bngtv"
         }
       },
       "oauth_client": [
         {
-          "client_id": "522973328038-f23rs3ns7e4so9tq7hmccrqjfju3sf6m.apps.googleusercontent.com",
+          "client_id": "11742248817-rq53q671eua2tbusnet8ska8cqkmcp5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bngtv",
+            "certificate_hash": "0551fc898842a0fc4fa8e73ccd70b01b4e513e0b"
+          }
+        },
+        {
+          "client_id": "11742248817-iigiuj8nsm9iquq76ud5qtd8otr33qtp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBw97g3umyeR2yb2x_gdRwFFhMyWIMf3UU"
+          "current_key": "AIzaSyCFTd3YLJG7fxTfmxrEjIQD43PAell4waQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "522973328038-f23rs3ns7e4so9tq7hmccrqjfju3sf6m.apps.googleusercontent.com",
+              "client_id": "11742248817-iigiuj8nsm9iquq76ud5qtd8otr33qtp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

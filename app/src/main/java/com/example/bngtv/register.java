@@ -62,7 +62,7 @@ public class register extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(register.this, "Unsuccessful registration of User", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(register.this, "Error"+ e.getMessage(), Toast.LENGTH_LONG).show();
 
                     }
                 });

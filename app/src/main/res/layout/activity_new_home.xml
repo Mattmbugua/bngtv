@@ -16,14 +16,146 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--                app:title="Home"-->
+<!--                android:textAlignment="center"-->
+<!--                tools:ignore="PrivateResource"-->
+<!--                />-->
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:title="Home"
-                android:textAlignment="center"
-                tools:ignore="PrivateResource" />
+                android:layout_gravity="start"
+                android:paddingTop="0dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                >
+                <ImageView
+                    android:id="@+id/IconMenu"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/menu_icon"/>
+                <ImageView
+                    android:id="@+id/IconLogo"
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:layout_toRightOf="@+id/IconMenu"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@mipmap/loginlogo456"/>
+
+                <TextView
+                    android:id="@+id/Seriestxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/IconLogo"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="45dp"
+                    android:text="Series"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/Musictxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Music"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@+id/Seriestxt"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/Mycollectiontxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Musictxt"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="My Collection"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Relati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/vacationSongs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="100dp"
+                    android:text="VACATION SONGS"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Romantictxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vacationSongs"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="100dp"
+                    android:text="ROMANTIC"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addPlaylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Romantictxt"
+                    android:drawableTop="@drawable/add"
+                    android:padding="25dp"
+                    android:text="Add to playlist"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/playYoutube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/Romantictxt"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/addPlaylist"
+                    android:background="@drawable/round"
+                    android:drawableStart="@drawable/playtubeziko"
+                    android:drawableLeft="@drawable/playtubeziko"
+                    android:padding="3dp"
+                    android:text="play"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/infortxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Romantictxt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toRightOf="@+id/playYoutube"
+                    android:drawableTop="@drawable/infor"
+                    android:padding="25dp"
+                    android:text="Infor"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,7 +201,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_recycler1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -126,7 +259,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_recycler2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -183,7 +317,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_recycler3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -194,16 +329,25 @@
 
 
             </LinearLayout>
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_nav_home"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/background_home"
-                app:menu="@menu/bottom_menu"
-                app:itemIconTint="@drawable/selector1"
-                />
+                android:orientation="vertical"
+                android:gravity="bottom">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_nav_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:itemIconTint="@drawable/selector1"
+                    app:menu="@menu/bottom_menu" />
+            </LinearLayout>
+
 
         </LinearLayout>
+
     </ScrollView>
 
 

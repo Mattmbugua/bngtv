@@ -55,14 +55,14 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(Login.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Login.this, Mushie.class));
+                        startActivity(new Intent(Login.this, MainActivity.class));
                         finish();
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Login.this, "Unsuccesful login", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });

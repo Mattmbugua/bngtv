@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bngtv">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +15,9 @@
             android:name=".Mushie"
             android:label="@string/title_activity_mushie"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".register" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
