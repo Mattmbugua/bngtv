@@ -1,11 +1,15 @@
 package com.example.bngtv;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 
 import com.example.bngtv.HelperClasses.adapterphone;
@@ -27,6 +31,26 @@ public class MainActivity extends AppCompatActivity implements adapterphone.List
 
         //Bottomnavigation
         nbtmnav = findViewById(R.id.bottom_nav_home);
+
+        nbtmnav.setSelectedItemId(R.id.home_icon);
+
+        nbtmnav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.home_icon:
+                        return true;
+                    case R.id.explore_icon:
+                        return true;
+                    case R.id.person_icon:
+                        startActivity(new Intent(getApplicationContext(),tester.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
         //Hooks
         phoneRecycler1 = findViewById(R.id.my_recycler1);

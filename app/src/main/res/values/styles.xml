@@ -19,5 +19,8 @@
         <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
 
     </style>
+    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme -->
+    </style>
 
 </resources>

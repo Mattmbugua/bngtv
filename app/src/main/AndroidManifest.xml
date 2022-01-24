@@ -15,9 +15,9 @@
             android:name=".Mushie"
             android:label="@string/title_activity_mushie"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".register" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Login" />
-        <activity android:name=".register">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

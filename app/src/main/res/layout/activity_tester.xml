@@ -1,148 +1,582 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     tools:context=".MainActivity"
     android:background="@color/background_home"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_home">
+
+
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <LinearLayout
+
+        <RelativeLayout
+            android:id="@+id/relativelay_logo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            android:layout_gravity="start"
+            android:paddingLeft="5dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="15dp">
+
+
+            <ImageView
+                android:id="@+id/IconLogo"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:scaleType="center"
+                android:src="@mipmap/loginlogo456" />
+            <EditText
+
+                android:id="@+id/search_edt"
+                android:layout_below="@+id/IconLogo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:title="Home"
+                android:padding="5dp"
                 android:textAlignment="center"
-                tools:ignore="PrivateResource" />
+                android:hint="Search People on BNG-TV"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/search"
+                android:background="@drawable/roundcorners"
+                />
 
-            <LinearLayout
-
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/artists_button"
+                android:layout_width="190dp"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:orientation="vertical">
+                android:layout_below="@+id/search_edt"
+                android:background="@color/red"
+                android:text="ARTISTS"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/users_button"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_edt"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/squareoutline"
+                android:text="USERS"
+
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/artists_button"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="8dp">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:ignore="UselessParent"
-                    >
+                    android:background="@color/background_home">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card1_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ukelele" />
+                    </androidx.cardview.widget.CardView>
+
 
                     <TextView
-                        android:id="@+id/txt_discover"
+                        android:id="@+id/txt_travis1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Discover New"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card1_layer2"
+                        android:text="Travis Scott"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
-                    <ImageView
-                        android:id="@+id/img_home"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/home1"
-                        android:layout_marginLeft="50dp"
-                        android:layout_toRightOf="@+id/txt_discover"/>
-                    <ImageView
-                        android:id="@+id/img_headphones"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/headset"
-                        android:layout_marginLeft="80dp"
-                        android:layout_toRightOf="@+id/img_home"/>
-
-
+                        android:layout_below="@+id/txt_travis1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card1_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/my_recycler1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            </androidx.cardview.widget.CardView>
 
-
-                </androidx.recyclerview.widget.RecyclerView>
-
-
-
-
-
-
-            </LinearLayout>
-            <LinearLayout
-
-                android:layout_width="match_parent"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:orientation="vertical">
-
+                android:layout_below="@+id/artists_button"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/card1"
+                app:cardCornerRadius="8dp">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:ignore="UselessParent"
-                    >
+                    android:background="@color/background_home">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/whitey" />
+                    </androidx.cardview.widget.CardView>
+
 
                     <TextView
-                        android:id="@+id/txt_discover2"
+                        android:id="@+id/txt_travis2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Popular"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card2_layer2"
+                        android:text="Travis Scott"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
-                    <ImageView
-                        android:id="@+id/img_home2"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/home1"
-                        android:layout_marginLeft="50dp"
-                        android:layout_toRightOf="@+id/txt_discover2"/>
-                    <ImageView
-                        android:id="@+id/img_headphones2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/headset"
-                        android:layout_marginLeft="80dp"
-                        android:layout_toRightOf="@+id/img_home2"/>
-
-
+                        android:layout_below="@+id/txt_travis2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card2_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/my_recycler2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
 
 
-                </androidx.recyclerview.widget.RecyclerView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/blackpony" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card3_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis3"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card3_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_below="@+id/card2"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/headscarf" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card4_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis4"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card4_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card5_layer2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="250dp">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/blackguitar" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card5_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis5"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card5_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_below="@+id/card3"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/card5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card6_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/extrguy" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card6_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis6"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card6_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_below="@+id/card5"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card7_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shouting" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card7_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis7"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card7_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card8"
+                android:layout_below="@+id/card5"
+                android:layout_toRightOf="@+id/card7"
+                android:layout_marginTop="20dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_home">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card8_layer2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="250dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/khalid" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/txt_travis8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/card8_layer2"
+                        android:text="Travis Scott"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_travis8"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/card8_layer2"
+                        android:text="500 tracks 60 Videos"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
 
 
 
-
-
-            </LinearLayout>
-
-        </LinearLayout>
     </ScrollView>
 
 
 
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/background_home"
+       android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selector1"
+        app:menu="@menu/bottom_menu" />
 
 
-</LinearLayout>
+</RelativeLayout>
